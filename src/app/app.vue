@@ -1,11 +1,7 @@
 <template>
     <h3>{{ name }}</h3>
-    <select name="" id="" v-model="category">
-        <option value="">- 选择分类</option>
-        <option value="development">应用开发</option>
-        <option value="game">游戏开发</option>
-    </select>
-    <span>{{ category }}</span>
+    <input type="text" @input="onInputContent">
+    <span>{{ data }}</span>
 </template>
 
 <script>
@@ -13,9 +9,15 @@ export default {
     data() {
         return {
             name: 'Kyo Apps',
-            category: ''
+            data: ''
         }
-    }     
+    },  
+    
+    methods: {
+        onInputContent(event) {
+            this.data = event.target.value;
+        }
+    }
 
 }
 </script>
