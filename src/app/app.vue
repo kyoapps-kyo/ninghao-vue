@@ -1,7 +1,7 @@
 <template>
     <h3>{{ name }}</h3>
-    <input type="text" v-model.lazy="content">
-    <span>{{ content }}</span>
+    <input type="text" v-model.number="content">
+    <span>{{ typeof(content) }}</span>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
     data() {
         return {
             name: 'Kyo Apps',
-            content: '8896'
+            content: 0
         }
     },  
     
