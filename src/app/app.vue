@@ -1,7 +1,7 @@
 <template>
     <h3>{{ name }}</h3>
-    <input type="text" v-model="content">
-    <span>-> Content {{ content }}</span>
+    <textarea v-model="content" placeholder="写点东西"></textarea>
+    <span>{{ content }}</span>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
     data() {
         return {
             name: 'Kyo Apps',
-            content: '起飞了',
+            content: '',
         }
     }     
 
