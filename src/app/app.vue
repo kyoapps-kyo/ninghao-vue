@@ -1,6 +1,6 @@
 <template>
     <h3>{{ name }}</h3>
-    <input type="text" @input="onInputContent">
+    <input type="text" @change="onChangeContent">
     <span>{{ data }}</span>
 </template>
 
@@ -14,7 +14,7 @@ export default {
     },  
     
     methods: {
-        onInputContent(event) {
+        onChangeContent(event) {
             this.data = event.target.value;
         }
     }
