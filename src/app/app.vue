@@ -1,7 +1,7 @@
 <template>
     <h3>{{ name }}</h3>
-    <input type="text" @keyup.enter="onKeyupContent">
-    <span>{{ data }}</span>
+    <input type="text" :value="content" @input="content = $event.target.value">
+    <span>{{ content }}</span>
 </template>
 
 <script>
@@ -9,14 +9,12 @@ export default {
     data() {
         return {
             name: 'Kyo Apps',
-            data: ''
+            content: '8896'
         }
     },  
     
     methods: {
-        onKeyupContent(event) {
-            console.log('回车!');
-        }
+        
     }
 
 }
