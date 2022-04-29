@@ -1,18 +1,14 @@
 <template>
     <h3>{{ name }}</h3>
-    <label for="tag-1">
-        <input id="tag-1" type="checkbox" value="xxx" v-model="tags">
-        xxx
+    <label for="subscription-annual">
+        <input type="radio" v-model="subscription" value="annual" id="subscription-annual">
+        一年
     </label>
-    <label for="tag-2">
-        <input id="tag-2" type="checkbox" value="yyy" v-model="tags">
-        yyy
+    <label for="subscription-quarterly">
+        <input type="radio" v-model="subscription" value="quarterly" id="subscription-quarterly">
+        一个季度
     </label>
-    <label for="tag-3">
-        <input id="tag-3" type="checkbox" value="zzz" v-model="tags">
-        zzz
-    </label>
-    <span> Tags: {{ tags }}</span>
+    <span>{{ subscription }}</span>
 </template>
 
 <script>
@@ -20,7 +16,7 @@ export default {
     data() {
         return {
             name: 'Kyo Apps',
-            tags: []
+            subscription: 'annual'
         }
     }     
 
