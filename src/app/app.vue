@@ -1,14 +1,11 @@
 <template>
     <h3>{{ name }}</h3>
-    <label for="subscription-annual">
-        <input type="radio" v-model="subscription" value="annual" id="subscription-annual">
-        一年
-    </label>
-    <label for="subscription-quarterly">
-        <input type="radio" v-model="subscription" value="quarterly" id="subscription-quarterly">
-        一个季度
-    </label>
-    <span>{{ subscription }}</span>
+    <select name="" id="" v-model="category">
+        <option value="">- 选择分类</option>
+        <option value="development">应用开发</option>
+        <option value="game">游戏开发</option>
+    </select>
+    <span>{{ category }}</span>
 </template>
 
 <script>
@@ -16,7 +13,7 @@ export default {
     data() {
         return {
             name: 'Kyo Apps',
-            subscription: 'annual'
+            category: ''
         }
     }     
 
