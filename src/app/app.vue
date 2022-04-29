@@ -1,6 +1,6 @@
 <template>
     <h3>{{ name }}</h3>
-    <input type="text" @change="onChangeContent">
+    <input type="text" @keyup.enter="onKeyupContent">
     <span>{{ data }}</span>
 </template>
 
@@ -14,8 +14,8 @@ export default {
     },  
     
     methods: {
-        onChangeContent(event) {
-            this.data = event.target.value;
+        onKeyupContent(event) {
+            console.log('回车!');
         }
     }
 
