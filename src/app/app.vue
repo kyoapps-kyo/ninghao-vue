@@ -1,7 +1,7 @@
 <template>
     <h3>{{ name }}</h3>
-    <input type="text" v-model.number="content">
-    <span>{{ typeof(content) }}</span>
+    <input type="text" v-model.trim="content">
+    <span>Length : {{ content.length }}</span>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
     data() {
         return {
             name: 'Kyo Apps',
-            content: 0
+            content: '1234'
         }
     },  
     
