@@ -1,18 +1,18 @@
 <template>
-    <h3>Kyo Apps</h3>
+  <h3>{{ name }}</h3>
 </template>
 
 <script>
-export default {
+  export default {
     data() {
-        return {
+      return {
+        name: 'kyo-apps',
+      }
+    }
 
-        }
-    }     
-
-}
+  }
 </script>
 
 <style scoped>
-@import "./styles/app.css"
+  @import './styles/app.css';
 </style>
