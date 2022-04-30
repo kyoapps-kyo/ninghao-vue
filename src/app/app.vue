@@ -1,18 +1,32 @@
 <template>
-    <h3>Kyo Apps</h3>
+  <div class="page">
+    <div class="page-header">
+      <h3 class="brand">{{ name }}</h3>
+      <div class="menu">
+        <router-link class="menu-item"
+                     :to="{ name: 'home'}">Home</router-link>
+        <router-link class="menu-item"
+                     :to="{ name: 'about'}">about</router-link>
+        <router-link class="menu-item"
+                     :to="{ name: 'postIndex'}">内容</router-link>
+      </div>
+    </div>
+    <div class="page-body">
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
+  export default {
     data() {
-        return {
-
-        }
-    }     
-
-}
+      return {
+        name: 'Kyo Apps'
+      };
+    },
+  };
 </script>
 
 <style scoped>
-@import "./styles/app.css"
+  @import './styles/app.css';
 </style>
