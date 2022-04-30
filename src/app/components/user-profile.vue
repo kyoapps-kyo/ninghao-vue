@@ -1,0 +1,34 @@
+<template>
+  <component :is="currentComponent"></component>
+  <small @click="onClickHintText">{{ hintText }}</small>
+</template>
+
+<script>
+  import UserRegister from './user-register';
+  import UserLogin from './user-login';
+  export default {
+    data() {
+      return {
+        currentComponent: 'UserLogin',
+        hintText: '还没有账户，点击注册'
+      }
+    },
+    methods: {
+      onClickHintText() {
+        switch (this.currentComponent) {
+          case 'UserRegister':
+            this.currentComponent = 'UserLogin';
+            this.hintText = '还没有账户，点击注册';
+            break;
+          case 'UserLogin':
+            this.currentComponent = 'UserRegister';
+            this.hintText = '已有账户，点击登陆';
+            break;
+        }
+      }
+    },
+    components: {
+      UserRegister, UserLogin
+    },
+  }
+</script>

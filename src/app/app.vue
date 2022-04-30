@@ -1,18 +1,31 @@
 <template>
-    <h3>Kyo Apps</h3>
+  <h3>Kyo Apps</h3>
+  <UserProfile />
+
 </template>
 
 <script>
-export default {
+  import UserProfile from './components/user-profile';
+  export default {
     data() {
-        return {
+      return {
 
-        }
-    }     
-
-}
+      }
+    },
+    components: {
+      UserProfile,
+    },
+    methods: {
+      onTapAppButton(text) {
+        console.log('on top app button', text);
+      },
+      onInitAppButton() {
+        console.log('on init app button');
+      }
+    }
+  }
 </script>
 
 <style scoped>
-@import "./styles/app.css"
+  @import './styles/app.css';
 </style>
